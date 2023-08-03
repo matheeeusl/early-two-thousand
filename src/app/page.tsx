@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <>
-      <div id="main" className="w-full bg-white">
+      <div id="main" className="flex flex-col w-full bg-white gap-5">
         <Section title="Bem vindos ao Haunt Seekers">
           <p className="pl-1">
             Caros aventureiros do desconhecido, é com grande prazer que damos as
@@ -32,7 +32,7 @@ export default function Home() {
           })}
         </Section>
       </div>
-      <div id="ads" className="flex flex-col w-96 gap-1">
+      <div id="ads" className="flex flex-col w-96 gap-1 pl-2 pt-2">
         {mock.ads.map((ad, _) => {
           return (
             <div key={`ad: ${ad.alt} - ${_}`}>

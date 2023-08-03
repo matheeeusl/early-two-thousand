@@ -10,7 +10,7 @@ export const Section = ({
   categories?: boolean;
 }) => {
   return (
-    <div className={`${styles} pt-4 w-full border-gray-800`}>
+    <div className={`${styles} w-full border-gray-800`}>
       <div className="bg-red-800">
         <p className="text-white pl-1">{title}</p>
       </div>
