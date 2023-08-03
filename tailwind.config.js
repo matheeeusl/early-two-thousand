@@ -21,6 +21,11 @@ module.exports = {
         "b-container": "#919191",
         secret: "#040204",
       },
+      minWidth: {
+        25: "25px",
+        50: "50px",
+        70: "70px",
+      },
     },
   },
   plugins: [],

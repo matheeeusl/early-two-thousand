@@ -3,14 +3,21 @@ export interface PostProps {
   titulo: string;
   subtitulo: string;
   descricao: string;
-  autor: string;
+  autor: Autor;
   data: string;
   respostas: Resposta[];
 }
 
 export interface Resposta {
   id: string;
-  autor: string;
+  autor: Autor;
   data: string;
   comentario: string;
+}
+
+export interface Autor {
+  id: string;
+  foto: string;
+  nome: string;
+  nick: string;
 }

@@ -10,14 +10,18 @@ export const Post = ({ post }: { post: PostProps }): JSX.Element => {
   };
 
   return (
-    <div className="m-2 border-black border-4" onClick={handleClick}>
-      <div>
-        <h2>{post.titulo}</h2>
-        <h4>{post.subtitulo}</h4>
+    <div className="cursor-pointer flex border-2" onClick={handleClick}>
+      <div className="text-xs pr-1 border-r-2 text-center min-w-50">Icon</div>
+      <div className="flex-1 pl-1 border-r-2">
+        <h4>{post.titulo}</h4>
+        <p className="text-xs">{post.subtitulo}</p>
       </div>
-      <div className="text-xs">
-        <p>Autor: {post.autor}</p>
-        <p>Data: {post.data}</p>
+      <div className="pr-1 border-r-2 min-w-70 text-center">
+        {post.respostas.length}
+      </div>
+      <div className="pr-1 border-r-2 min-w-70">
+        <a className="text-xs">By {post.autor.nick ?? post.autor.nome}</a>
+        <p className="text-xs">{post.data}</p>
       </div>
     </div>
   );

@@ -21,7 +21,6 @@ export default function RootLayout({
   const [secrectSite, setSecretSite] = useState(false);
   const { KeyJ, KeyL, KeyZ } = keyboardKeys;
   const handleShortcut = () => {
-    console.log("Secret site unlocked!");
     setSecretSite(true);
   };
 
@@ -33,7 +32,7 @@ export default function RootLayout({
   ]);
   return (
     <html lang="en">
-      <body className={secrectSite ? "bg-eyes" : "bg-stars"}>
+      <body className={secrectSite ? "bg-eyes cursor-cell" : "bg-stars"}>
         <Header secret={secrectSite} />
         <Menu />
         <main>

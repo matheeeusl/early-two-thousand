@@ -10,7 +10,7 @@ const PostPage = ({ params }: { params: { id: string } }) => {
       {post.respostas.map((resposta) => {
         return (
           <div key={`resposta: ${resposta.id}`} className="">
-            <p>Autor: {resposta.autor}</p>
+            <p>Autor: {resposta.autor.nick ?? resposta.autor.nome}</p>
             <p>Data: {resposta.data}</p>
             <div dangerouslySetInnerHTML={{ __html: resposta.comentario }} />
           </div>
