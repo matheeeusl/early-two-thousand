@@ -9,12 +9,6 @@ import { Menu } from "@/components/Menu/Menu";
 import { usePathname } from "next/navigation";
 import { checkIsPublicRoutes } from "@/functions/check-is-public-route";
 
-export const metadata: Metadata = {
-  title: "Beyond The Veil 2k!",
-  description:
-    "Criado pelo desespero, mantido pela esperança. Caçadores de assombrações, unam-se!",
-};
-
 export default function RootLayout({
   children,
 }: {
