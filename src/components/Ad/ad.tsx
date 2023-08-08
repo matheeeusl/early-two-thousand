@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { AdProps } from "./ad.type";
 import Image from "next/image";
+import { AdProps } from "@/types";
 
 export const Ad = ({ ad }: { ad: AdProps }): JSX.Element => {
   const height = parseInt(ad.size.height);

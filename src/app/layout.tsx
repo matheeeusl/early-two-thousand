@@ -6,9 +6,11 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Header } from "@/components/Header/Header";
 import { Menu } from "@/components/Menu/Menu";
+import { usePathname } from "next/navigation";
+import { checkIsPublicRoutes } from "@/functions/check-is-public-route";
 
 export const metadata: Metadata = {
-  title: "Haunt Seekers 2000",
+  title: "Beyond The Veil 2k!",
   description:
     "Criado pelo desespero, mantido pela esperança. Caçadores de assombrações, unam-se!",
 };
@@ -18,15 +20,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+
+  const isPublic = checkIsPublicRoutes(pathname!);
+
+  console.log("isPublic", isPublic);
+
   const [secrectSite, setSecretSite] = useState(false);
-  const { KeyJ, KeyL, KeyZ } = keyboardKeys;
+  const { KeyH, KeyE, KeyL, KeyP } = keyboardKeys;
   const handleShortcut = () => {
     setSecretSite(true);
   };
 
   useKeybindings([
     {
-      cmd: [KeyJ, KeyL, KeyZ],
+      cmd: [KeyH, KeyE, KeyL, KeyP],
       callback: handleShortcut,
     },
   ]);

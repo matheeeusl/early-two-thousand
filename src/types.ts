@@ -1,4 +1,4 @@
-export interface PostProps {
+export interface IPost {
   id: string;
   titulo: string;
   subtitulo: string;
@@ -20,4 +20,16 @@ export interface Autor {
   foto: string;
   nome: string;
   nick: string;
+}
+
+export interface AdProps {
+  size: Size;
+  src: string;
+  alt: string;
+  link?: string;
+}
+
+export interface Size {
+  height: string;
+  width: string;
 }

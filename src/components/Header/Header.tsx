@@ -12,19 +12,19 @@ export const Header = ({ secret }: { secret: boolean }): JSX.Element => {
       <div className="flex">
         <Image
           src={src}
-          alt="HauntSeekers 2000 left eye"
+          alt="Beyond The Veil 2k! left eye"
           width={100}
           height={100}
         />
         <Image
           src={src}
-          alt="HauntSeekers 2000 right eye"
+          alt="Beyond The Veil 2k! right eye"
           width={100}
           height={100}
         />
       </div>
       <h1 className="text-2xl md:text-7xl font-cursive text-red-600">
-        Haunt Seekers 2000
+        Beyond The Veil 2k!
       </h1>
     </header>
   );
