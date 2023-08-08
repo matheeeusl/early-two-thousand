@@ -5,6 +5,6 @@ export const APP_ROUTES = {
     post: "/post",
   },
   private: {
-    secret: "/secret",
+    "dev-room": "/dev-room",
   },
 };

@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface IPost {
   id: string;
   titulo: string;
@@ -32,4 +34,8 @@ export interface AdProps {
 export interface Size {
   height: string;
   width: string;
+}
+
+export interface IAssinatura {
+  assinatura: string;
 }
