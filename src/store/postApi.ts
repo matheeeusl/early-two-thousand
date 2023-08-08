@@ -1,11 +1,12 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query";
 
 import { IPost } from "@/types";
+import { API_URL } from "@/constants/api-url";
 
 export const postApi = createApi({
   reducerPath: "postApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:3000/api/",
+    baseUrl: `${API_URL}/api/`,
   }),
   tagTypes: ["Post"],
   endpoints: (builder) => ({

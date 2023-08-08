@@ -1,5 +1,9 @@
-const SecretPage = () => {
-  return <div>Essa rota é para ser privada</div>;
+const Secret = (): React.ReactElement => {
+  return (
+    <div className="w-full bg-gray-200">
+      <h1>Essa rota deveria ser privada!</h1>
+    </div>
+  );
 };
 
-export default SecretPage;
+export default Secret;

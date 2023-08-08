@@ -6,10 +6,11 @@ import { Section } from "@/components/Section/Section";
 
 import { store } from "@/store";
 import { setStartupPost } from "@/store/searchSlice";
+import { API_URL } from "@/constants/api-url";
 
 export default async function Home() {
-  const reqPosts = await fetch("http://localhost:3000/api/search");
-  const reqAds = await fetch("http://localhost:3000/api/ads");
+  const reqPosts = await fetch(`${API_URL}/api/search`);
+  const reqAds = await fetch(`${API_URL}/api/ads`);
   const posts = await reqPosts.json();
   const ads = await reqAds.json();
 

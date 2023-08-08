@@ -1,8 +1,9 @@
 import { Res } from "@/components/Resposta/Res";
+import { API_URL } from "@/constants/api-url";
 import { Resposta } from "@/types";
 
 const PostPage = async ({ params }: { params: { id: string } }) => {
-  const req = await fetch(`http://localhost:3000/api/search?id=${params.id}`);
+  const req = await fetch(`${API_URL}/api/search?id=${params.id}`);
   const post = await req.json();
   if (!post) return <div className="text-white">Post não encontrado</div>;
 
