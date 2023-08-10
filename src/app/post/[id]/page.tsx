@@ -4,7 +4,6 @@ import { store } from "@/store";
 import { Resposta } from "@/types";
 
 const PostPage = async ({ params }: { params: { id: string } }) => {
-  // Get single post from reducer
   const { posts } = store.getState().posts;
   const post = posts.find((post) => post.id === params.id);
 
