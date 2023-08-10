@@ -22,6 +22,7 @@ export interface Autor {
   foto: string;
   nome: string;
   nick: string;
+  assinatura?: string;
 }
 
 export interface AdProps {

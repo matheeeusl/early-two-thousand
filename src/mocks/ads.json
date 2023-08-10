@@ -20,8 +20,8 @@
   },
   {
     "id": "3",
-    "src": "/images/Windows_XP_SP3.png",
-    "alt": "Windows XP SP3",
+    "src": "/images/DragonFableScreen.jpg",
+    "alt": "Dragon Fable",
     "size": {
       "height": "100",
       "width": "300"
@@ -29,17 +29,8 @@
   },
   {
     "id": "4",
-    "src": "/images/Windows_XP_SP3.png",
-    "alt": "Windows XP SP3",
-    "size": {
-      "height": "100",
-      "width": "300"
-    }
-  },
-  {
-    "id": "5",
-    "src": "/images/Windows_XP_SP3.png",
-    "alt": "Windows XP SP3",
+    "src": "/images/pepsi.jpeg",
+    "alt": "Pepsi",
     "size": {
       "height": "100",
       "width": "300"

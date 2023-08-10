@@ -54,8 +54,9 @@
         "autor": {
           "id": "001",
           "nome": "Ciclano de Tal",
-          "foto": "/images/John_Doe.png",
-          "nick": "C1cl4n0"
+          "foto": "/images/scream.png",
+          "nick": "C1cl4n0",
+          "assinatura": "<p>O cliclano que todos falam</p>"
         },
         "data": "10/10/2005",
         "comentario": "Isso não é nada"
@@ -65,7 +66,7 @@
         "autor": {
           "id": "000",
           "nome": "John Doe",
-          "foto": "/images/John_Doe.png",
+          "foto": "/images/scream.svg",
           "nick": "D00e"
         },
         "data": "10/10/2005",

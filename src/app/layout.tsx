@@ -64,6 +64,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={secrectSite ? "bg-eyes cursor-cell" : "bg-stars"}>
+        <link rel="icon" href="/icons/ghost.svg" sizes="any" />
         <Header secret={secrectSite} />
         <Menu />
         <main>
