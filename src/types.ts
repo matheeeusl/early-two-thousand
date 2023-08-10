@@ -25,6 +25,7 @@ export interface Autor {
 }
 
 export interface AdProps {
+  id: string;
   size: Size;
   src: string;
   alt: string;
@@ -38,4 +39,18 @@ export interface Size {
 
 export interface IAssinatura {
   assinatura: string;
+}
+
+export interface IBasicModal {
+  onClose: () => void;
+}
+
+export interface IMultiInput {
+  length: number;
+  onComplete: (code: string) => void;
+}
+
+export interface IRegistro {
+  data: string;
+  conteudo: string;
 }

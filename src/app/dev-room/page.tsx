@@ -1,4 +1,8 @@
-const Secret = (): React.ReactElement => {
+import { store } from "@/store";
+
+const DevRoom = (): React.ReactElement => {
+  const { registros } = store.getState().registro;
+
   return (
     <div className="w-full bg-gray-200">
       <h1>Essa rota deveria ser privada!</h1>
@@ -6,4 +10,4 @@ const Secret = (): React.ReactElement => {
   );
 };
 
-export default Secret;
+export default DevRoom;

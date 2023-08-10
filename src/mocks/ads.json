@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "src": "/gifs/yourpenisourbusiness.gif",
     "alt": "Pen Island",
     "link": "https://www.penisland.net/",
@@ -9,6 +10,7 @@
     }
   },
   {
+    "id": "2",
     "src": "/images/Windows_XP_SP3.png",
     "alt": "Windows XP SP3",
     "size": {
@@ -17,6 +19,7 @@
     }
   },
   {
+    "id": "3",
     "src": "/images/Windows_XP_SP3.png",
     "alt": "Windows XP SP3",
     "size": {
@@ -25,6 +28,7 @@
     }
   },
   {
+    "id": "4",
     "src": "/images/Windows_XP_SP3.png",
     "alt": "Windows XP SP3",
     "size": {
@@ -33,6 +37,7 @@
     }
   },
   {
+    "id": "5",
     "src": "/images/Windows_XP_SP3.png",
     "alt": "Windows XP SP3",
     "size": {

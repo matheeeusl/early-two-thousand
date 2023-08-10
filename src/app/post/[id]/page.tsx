@@ -1,10 +1,13 @@
 import { Res } from "@/components/Resposta/Res";
-import { API_URL } from "@/constants/api-url";
+
+import { store } from "@/store";
 import { Resposta } from "@/types";
 
 const PostPage = async ({ params }: { params: { id: string } }) => {
-  const req = await fetch(`${API_URL}/api/search?id=${params.id}`);
-  const post = await req.json();
+  // Get single post from reducer
+  const { posts } = store.getState().posts;
+  const post = posts.find((post) => post.id === params.id);
+
   if (!post) return <div className="text-white">Post não encontrado</div>;
 
   return (

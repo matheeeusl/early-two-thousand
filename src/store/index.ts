@@ -1,18 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import searchReducer from "./searchSlice";
-import secretReducer from "./secretSlice";
-
-import { postApi } from "./postApi";
+import registroReducer from "./registroSlice";
+import postReducer from "./postSlice";
+import adsReducer from "./adsSlice";
 
 export const store = configureStore({
   reducer: {
-    secret: secretReducer,
-    search: searchReducer,
-    postApi: postApi.reducer,
+    registro: registroReducer,
+    posts: postReducer,
+    ads: adsReducer,
   },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(postApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

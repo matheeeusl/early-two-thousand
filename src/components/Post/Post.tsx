@@ -18,7 +18,12 @@ export const Post = ({ post }: { post: IPost }): JSX.Element => {
       onClick={handleClick}
     >
       <div className="text-xs border-r-2 flex justify-center">
-        <Image src="/icons/ghost.svg" width={20} height={20} alt="ghost icon" />
+        <Image
+          src="./icons/ghost.svg"
+          width={20}
+          height={20}
+          alt="ghost icon"
+        />
       </div>
       <div className="flex-1 border-r-2 col-span-9 pl-1">
         <h4>{post.titulo}</h4>

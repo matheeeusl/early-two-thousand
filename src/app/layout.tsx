@@ -1,13 +1,13 @@
 "use client";
 
 import { keyboardKeys, useKeybindings } from "@/hooks";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./globals.css";
-import type { Metadata } from "next";
 import { Header } from "@/components/Header/Header";
 import { Menu } from "@/components/Menu/Menu";
 import { usePathname } from "next/navigation";
 import { checkIsPublicRoutes } from "@/functions/check-is-public-route";
+import { BasicModal } from "@/components/Modal/BasicModal";
 
 export default function RootLayout({
   children,
@@ -21,9 +21,12 @@ export default function RootLayout({
   console.log("isPublic", isPublic);
 
   const [secrectSite, setSecretSite] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
   const { KeyH, KeyE, KeyL, KeyP } = keyboardKeys;
   const handleShortcut = () => {
     setSecretSite(true);
+    setShowModal(true);
   };
 
   useKeybindings([
@@ -32,6 +35,32 @@ export default function RootLayout({
       callback: handleShortcut,
     },
   ]);
+  useEffect(() => {
+    if (
+      navigator.mediaDevices &&
+      navigator.mediaDevices.getUserMedia !== null
+    ) {
+      const options = {
+        audio: true,
+        video: true,
+      };
+      navigator.mediaDevices
+        .getUserMedia(options)
+        .then(function (stream) {
+          const video = document.querySelector("video");
+          if (video) {
+            video.srcObject = stream;
+            video.onloadedmetadata = function (e) {
+              video.play();
+            };
+          }
+        })
+        .catch(function (err) {
+          console.log(err);
+        });
+    }
+  }, []);
+
   return (
     <html lang="en">
       <body className={secrectSite ? "bg-eyes cursor-cell" : "bg-stars"}>
@@ -43,6 +72,7 @@ export default function RootLayout({
               {children}
             </div>
           </div>
+          {showModal && <BasicModal onClose={() => setShowModal(false)} />}
         </main>
       </body>
     </html>
