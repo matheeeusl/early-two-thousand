@@ -78,7 +78,7 @@ export default function RootLayout({
       <body className={secrectSite ? "bg-eyes cursor-cell" : "bg-stars"}>
         <link rel="icon" href="/icons/ghost.svg" sizes="any" />
         <Header secret={secrectSite} />
-        <Menu />
+        <Menu secret={secrectSite} />
         <main>
           <div id="container" className="flex justify-center">
             <div id="container-inner" className="flex max-w-7xl w-full">

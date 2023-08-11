@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-export const Menu = (): JSX.Element => {
+export const Menu = ({ secret }: { secret: boolean }): JSX.Element => {
   return (
     <nav className="w-full bg-gray-800 shadow">
       <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
@@ -10,9 +10,11 @@ export const Menu = (): JSX.Element => {
             <li className="text-white">
               <Link href="/">Home</Link>
             </li>
-            <li className="text-white">
-              <Link href="/about">Sobre nós</Link>
-            </li>
+            {secret && (
+              <li className="text-white font-bold">
+                <Link href="/dev-room">DEV ROOM</Link>
+              </li>
+            )}
           </menu>
         </div>
       </div>
