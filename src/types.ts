@@ -44,6 +44,7 @@ export interface IAssinatura {
 
 export interface IBasicModal {
   onClose: () => void;
+  show: boolean;
 }
 
 export interface IMultiInput {

@@ -16,7 +16,7 @@ export const Registro = ({
         onClick={() => setDisplay(!display)}
       >
         <Image
-          src="./icons/calendar.svg"
+          src="/icons/calendar.svg"
           width={30}
           height={30}
           alt="calendar icon"

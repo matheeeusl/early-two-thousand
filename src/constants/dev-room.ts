@@ -1,3 +1,3 @@
 export const DEV_ROOM = {
-  password: "TODOS",
+  password: "McClain",
 };

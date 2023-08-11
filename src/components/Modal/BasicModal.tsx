@@ -1,11 +1,16 @@
 import { DEV_ROOM } from "@/constants/dev-room";
 import { IBasicModal } from "@/types";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MultiInput } from "@/components/MultiInput/MultiInput";
+import { saveLocalStorage } from "@/functions/save-local-storage";
+import { Md5 } from "ts-md5";
 
-export const BasicModal = ({ onClose }: IBasicModal): React.ReactElement => {
-  const [sound, setSound] = useState(true);
+export const BasicModal = ({
+  onClose,
+  show,
+}: IBasicModal): React.ReactElement => {
+  const [sound, setSound] = useState(false);
   const [videoAvailable, setVideoAvailable] = useState(false);
   const [permission, setPermission] = useState(false);
   const [password, setPassword] = useState("");
@@ -18,10 +23,22 @@ export const BasicModal = ({ onClose }: IBasicModal): React.ReactElement => {
     }
   };
 
+  const exitModal = () => {
+    toggleAudio();
+    onClose();
+  };
+
+  useEffect(() => {
+    if (show) {
+      toggleAudio();
+    }
+  }, [show]);
+
   const verifyPassword = (pass: string) => {
-    if (pass === DEV_ROOM.password) {
+    if (pass.toLowerCase() === DEV_ROOM.password.toLowerCase()) {
       setPermission(true);
-      console.log("allowed");
+      const encrypt = Md5.hashStr(DEV_ROOM.password);
+      saveLocalStorage("super-token", encrypt);
       return true;
     }
     return false;
@@ -30,23 +47,24 @@ export const BasicModal = ({ onClose }: IBasicModal): React.ReactElement => {
   const onClick = () => {
     console.log("clicked");
     if (permission) {
-      onClose();
+      exitModal();
     }
     const allowed = verifyPassword(password);
     console.log("allowed", allowed);
     if (allowed) {
-      onClose();
+      exitModal();
     }
   };
-
-  if (navigator.permissions) {
-    const permissionName = "camera" as PermissionName;
-    navigator.permissions.query({ name: permissionName }).then((result) => {
-      if (result.state === "granted") {
-        setVideoAvailable(true);
-      }
-    });
-  }
+  useEffect(() => {
+    if (navigator.permissions) {
+      const permissionName = "camera" as PermissionName;
+      navigator.permissions.query({ name: permissionName }).then((result) => {
+        if (result.state === "granted") {
+          setVideoAvailable(true);
+        }
+      });
+    }
+  }, []);
 
   return (
     <div
@@ -68,14 +86,14 @@ export const BasicModal = ({ onClose }: IBasicModal): React.ReactElement => {
                     <div className="absolute right-7 top-6">
                       {sound ? (
                         <Image
-                          src={"./icons/sound-on.svg"}
+                          src={"/icons/sound-on.svg"}
                           height={20}
                           width={20}
                           alt="sound on"
                         />
                       ) : (
                         <Image
-                          src={"./icons/sound-off.svg"}
+                          src={"/icons/sound-off.svg"}
                           height={20}
                           width={20}
                           alt="sound off"
@@ -108,7 +126,7 @@ export const BasicModal = ({ onClose }: IBasicModal): React.ReactElement => {
                   {videoAvailable && (
                     <div className="mt-2 flex items-center justify-center">
                       <MultiInput
-                        length={5}
+                        length={DEV_ROOM.password.length}
                         onComplete={(password) => setPassword(password)}
                       />
                     </div>
@@ -120,7 +138,7 @@ export const BasicModal = ({ onClose }: IBasicModal): React.ReactElement => {
               <button
                 type="button"
                 className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
-                onClick={onClose}
+                onClick={exitModal}
               >
                 Sair
               </button>

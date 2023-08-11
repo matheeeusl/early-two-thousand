@@ -52,6 +52,7 @@ export default function RootLayout({
             video.srcObject = stream;
             video.onloadedmetadata = function (e) {
               video.play();
+              video.muted = true;
             };
           }
         })
@@ -73,7 +74,9 @@ export default function RootLayout({
               {children}
             </div>
           </div>
-          {showModal && <BasicModal onClose={() => setShowModal(false)} />}
+          <div className={showModal ? "block" : "hidden"}>
+            <BasicModal show={showModal} onClose={() => setShowModal(false)} />
+          </div>
         </main>
       </body>
     </html>
