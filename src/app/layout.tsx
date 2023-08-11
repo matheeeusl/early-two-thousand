@@ -8,6 +8,8 @@ import { Menu } from "@/components/Menu/Menu";
 import { usePathname } from "next/navigation";
 import { checkIsPublicRoutes } from "@/functions/check-is-public-route";
 import { BasicModal } from "@/components/Modal/BasicModal";
+import { checkIsAuthenticated } from "@/functions/check-is-authenticated";
+import { RotaPrivada } from "@/components/RotaPrivada/RotaPrivada";
 
 export default function RootLayout({
   children,
@@ -17,8 +19,7 @@ export default function RootLayout({
   const pathname = usePathname();
 
   const isPublic = checkIsPublicRoutes(pathname!);
-
-  console.log("isPublic", isPublic);
+  const isAuth = checkIsAuthenticated();
 
   const [secrectSite, setSecretSite] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -60,7 +61,17 @@ export default function RootLayout({
           console.log(err);
         });
     }
-  }, []);
+    if (isAuth) {
+      setSecretSite(true);
+    }
+  }, [isAuth]);
+
+  const onCloseModal = () => {
+    setShowModal(false);
+    if (!isAuth) {
+      setSecretSite(false);
+    }
+  };
 
   return (
     <html lang="en">
@@ -71,11 +82,12 @@ export default function RootLayout({
         <main>
           <div id="container" className="flex justify-center">
             <div id="container-inner" className="flex max-w-7xl w-full">
-              {children}
+              {isPublic && children}
+              {!isPublic && <RotaPrivada>{children}</RotaPrivada>}
             </div>
           </div>
           <div className={showModal ? "block" : "hidden"}>
-            <BasicModal show={showModal} onClose={() => setShowModal(false)} />
+            <BasicModal show={showModal} onClose={onCloseModal} />
           </div>
         </main>
       </body>

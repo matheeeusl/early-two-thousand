@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { MultiInput } from "@/components/MultiInput/MultiInput";
 import { saveLocalStorage } from "@/functions/save-local-storage";
 import { Md5 } from "ts-md5";
+import { useRouter } from "next/navigation";
 
 export const BasicModal = ({
   onClose,
@@ -14,6 +15,7 @@ export const BasicModal = ({
   const [videoAvailable, setVideoAvailable] = useState(false);
   const [permission, setPermission] = useState(false);
   const [password, setPassword] = useState("");
+  const { push } = useRouter();
 
   const toggleAudio = () => {
     const video = document.querySelector("video");
@@ -37,7 +39,7 @@ export const BasicModal = ({
   const verifyPassword = (pass: string) => {
     if (pass.toLowerCase() === DEV_ROOM.password.toLowerCase()) {
       setPermission(true);
-      const encrypt = Md5.hashStr(DEV_ROOM.password);
+      const encrypt = Md5.hashStr(DEV_ROOM.password + DEV_ROOM.salt);
       saveLocalStorage("super-token", encrypt);
       return true;
     }
@@ -45,14 +47,13 @@ export const BasicModal = ({
   };
 
   const onClick = () => {
-    console.log("clicked");
     if (permission) {
       exitModal();
     }
     const allowed = verifyPassword(password);
-    console.log("allowed", allowed);
     if (allowed) {
       exitModal();
+      push("/dev-room");
     }
   };
   useEffect(() => {
