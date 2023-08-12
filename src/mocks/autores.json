@@ -72,7 +72,7 @@
   {
     "id": "013",
     "nome": "L0ck3DxDeVxR00m",
-    "foto": "",
+    "foto": "https://media3.giphy.com/media/TKVbTvpde9QTC/giphy.gif",
     "nick": "L0ck3DxDeVxR00m",
     "assinatura": "<p class='font-mono text-center'> <strong> If it's HELP you seek, ask for it. </strong> </p>"
   },
@@ -100,8 +100,15 @@
   {
     "id": "017",
     "nome": "lieutenant_dan",
-    "foto": "https://cdn.discordapp.com/attachments/424969187128115200/1139779481398153277/image.png",
+    "foto": "https://media.tenor.com/Q-rJVlonMrIAAAAC/maravilhoso-mister-m.gif",
     "nick": "lieutenant_dan",
+    "assinatura": ""
+  },
+  {
+    "id": "018",
+    "nome": "GhosT",
+    "foto": "https://cdn.discordapp.com/attachments/424969187128115200/1139781916925632552/image.png",
+    "nick": "GhosT",
     "assinatura": ""
   }
 ]

@@ -41,7 +41,7 @@ const PostPage = async ({ params }: { params: { id: string } }) => {
           </div>
         </div>
       </Section>
-      <Section title="Respostas">
+      <Section title="Comentários">
         {post.respostas.map((resposta: Resposta) => {
           return <Res resposta={resposta} key={resposta.id} />;
         })}

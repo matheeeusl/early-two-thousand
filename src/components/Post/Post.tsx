@@ -28,7 +28,7 @@ export const Post = ({ post }: { post: IPost }): JSX.Element => {
       </div>
       <div className="border-r-2 text-center pl-1">{post.respostas.length}</div>
       <div className="border-r-2 pl-1 col-span-2">
-        <a className="text-xs">Por {autor?.nick ?? autor?.nome}</a>
+        <a className="text-xs">Por {autor?.nick || autor?.nome}</a>
         <p className="text-xs">{post.data}</p>
       </div>
     </div>
