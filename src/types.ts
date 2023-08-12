@@ -50,3 +50,8 @@ export interface IRegistro {
   data: string;
   conteudo: string[];
 }
+
+export interface IRelatorio {
+  nome: string;
+  relatorio: string[];
+}

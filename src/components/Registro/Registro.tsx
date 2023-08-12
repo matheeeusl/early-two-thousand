@@ -4,8 +4,10 @@ import { useState } from "react";
 
 export const Registro = ({
   registro,
+  iconSrc = "/icons/calendar.svg",
 }: {
   registro: IRegistro;
+  iconSrc?: string;
 }): React.ReactElement => {
   const [display, setDisplay] = useState(false);
 
@@ -15,12 +17,7 @@ export const Registro = ({
         className="flex gap-2 items-center"
         onClick={() => setDisplay(!display)}
       >
-        <Image
-          src="/icons/calendar.svg"
-          width={30}
-          height={30}
-          alt="calendar icon"
-        />
+        <Image src={iconSrc} width={30} height={30} alt="calendar icon" />
         <h3>{registro.data}</h3>
       </button>
       {display && registro.conteudo.length > 0 && (

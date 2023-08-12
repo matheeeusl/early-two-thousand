@@ -4,6 +4,7 @@ import registroReducer from "./registroSlice";
 import postReducer from "./postSlice";
 import adsReducer from "./adsSlice";
 import autoresReducer from "./autoresSlice";
+import relatorioReducer from "./relatorioSlice";
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +12,7 @@ export const store = configureStore({
     posts: postReducer,
     ads: adsReducer,
     autores: autoresReducer,
+    relatorios: relatorioReducer,
   },
 });
 
