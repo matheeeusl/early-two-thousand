@@ -4,6 +4,7 @@ import { IPost } from "@/types";
 
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { getAutorDataById } from "@/functions/get-autor-data-by-id";
 
 export const Post = ({ post }: { post: IPost }): JSX.Element => {
   const router = useRouter();
@@ -11,6 +12,7 @@ export const Post = ({ post }: { post: IPost }): JSX.Element => {
   const handleClick = () => {
     router.push(`/post/${post.id}`);
   };
+  const autor = getAutorDataById(post.autor);
 
   return (
     <div
@@ -26,7 +28,7 @@ export const Post = ({ post }: { post: IPost }): JSX.Element => {
       </div>
       <div className="border-r-2 text-center pl-1">{post.respostas.length}</div>
       <div className="border-r-2 pl-1">
-        <a className="text-xs">By {post.autor.nick ?? post.autor.nome}</a>
+        <a className="text-xs">Por {autor?.nick ?? autor?.nome}</a>
         <p className="text-xs">{post.data}</p>
       </div>
     </div>

@@ -1,18 +1,16 @@
-import React from "react";
-
 export interface IPost {
   id: string;
   titulo: string;
   subtitulo: string;
   descricao: string;
-  autor: Autor;
+  autor: string;
   data: string;
   respostas: Resposta[];
 }
 
 export interface Resposta {
   id: string;
-  autor: Autor;
+  autor: string;
   data: string;
   comentario: string;
 }
@@ -22,7 +20,7 @@ export interface Autor {
   foto: string;
   nome: string;
   nick: string;
-  assinatura?: string;
+  assinatura: string;
 }
 
 export interface AdProps {
@@ -38,10 +36,6 @@ export interface Size {
   width: string;
 }
 
-export interface IAssinatura {
-  assinatura: string;
-}
-
 export interface IBasicModal {
   onClose: () => void;
   show: boolean;
@@ -54,5 +48,5 @@ export interface IMultiInput {
 
 export interface IRegistro {
   data: string;
-  conteudo: string;
+  conteudo: string[];
 }

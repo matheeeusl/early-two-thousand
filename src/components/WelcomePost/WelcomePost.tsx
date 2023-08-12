@@ -80,9 +80,9 @@ export const WelcomePost = (): React.ReactElement => {
 
           <p className="text-sm">26/07/2001</p>
           <Assinatura
-            assinatura="<b>If its HELP you
+            assinatura="<p class='font-cursive'><b>If its HELP you
             seek, ask for it.</b>
-            <p>L0ck3DxDeVxR00m - Admin</p>"
+            <p class='font-cursive'>L0ck3DxDeVxR00m - Admin</p></p>"
           />
         </div>
       )}

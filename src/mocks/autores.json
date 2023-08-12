@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "nome": "John Doe",
+    "foto": "/images/scream.svg",
+    "nick": "D00e",
+    "assinatura": "<p>Assinatura do John Doe</p>"
+  },
+  {
+    "id": "2",
+    "nome": "Ciclano de Tal",
+    "foto": "/images/scream.png",
+    "nick": "C1cl4n0",
+    "assinatura": "<p class='font-mono'>Assinatura do Ciclano de Tal</p>"
+  }
+]

@@ -1,8 +1,10 @@
-import { IAssinatura } from "@/types";
-
-export const Assinatura = ({ assinatura }: IAssinatura): React.ReactElement => {
+export const Assinatura = ({
+  assinatura,
+}: {
+  assinatura: string;
+}): React.ReactElement => {
   return (
-    <div className="border-t-2 mt-1 py-2 px-4 font-mono">
+    <div className="border-t w-100 border-black mt-2 py-2 px-4">
       <div dangerouslySetInnerHTML={{ __html: assinatura }} />
     </div>
   );

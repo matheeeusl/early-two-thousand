@@ -10,7 +10,7 @@ export const Registro = ({
   const [display, setDisplay] = useState(false);
 
   return (
-    <div className="w-full border-b-2 border-black pb-4">
+    <div className="w-full border-b-2 border-black pb-2">
       <button
         className="flex gap-2 items-center"
         onClick={() => setDisplay(!display)}
@@ -23,7 +23,17 @@ export const Registro = ({
         />
         <h3>{registro.data}</h3>
       </button>
-      {display && <div className="pl-3 pt-2">{registro.conteudo}</div>}
+      {display && registro.conteudo.length > 0 && (
+        <div className="pl-3 pt-2">
+          {registro.conteudo.map((paragraph, index) => {
+            return (
+              <p key={registro.data + index} className="mb-2">
+                {paragraph}
+              </p>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };

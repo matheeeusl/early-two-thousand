@@ -11,8 +11,9 @@
   },
   {
     "id": "2",
-    "src": "/images/Windows_XP_SP3.png",
-    "alt": "Windows XP SP3",
+    "src": "/images/tonyhawkproskater.png",
+    "alt": "Tony Hawk's Pro Skater",
+    "link": "https://www.tonyhawkthegame.com/",
     "size": {
       "height": "100",
       "width": "300"
@@ -22,6 +23,7 @@
     "id": "3",
     "src": "/images/DragonFableScreen.jpg",
     "alt": "Dragon Fable",
+    "link": "https://www.battleon.com/",
     "size": {
       "height": "100",
       "width": "300"
@@ -31,6 +33,7 @@
     "id": "4",
     "src": "/images/pepsi.jpeg",
     "alt": "Pepsi",
+    "link": "https://www.pepsi.com/",
     "size": {
       "height": "100",
       "width": "300"
