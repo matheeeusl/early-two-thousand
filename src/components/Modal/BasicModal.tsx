@@ -111,16 +111,21 @@ export const BasicModal = ({
                     {videoAvailable ? "Estou de olho!" : "Preciso te assistir!"}
                   </h3>
                   <div className="mt-2">
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-500 mb-4">
                       Só aqueles com o conhecimento e a quem eu possa ver podem
                       ter acesso a ajuda do Dev Room.
                     </p>
 
-                    {!videoAvailable && (
+                    {!videoAvailable ? (
                       <p className="text-xs">
                         <b>Obs:</b> Você não aceitou a permissão de vídeo, mude
                         nas configurações do seu navegador, e acesse a essa tela
                         novamente, para acessar ao input de senha de acesso.
+                      </p>
+                    ) : (
+                      <p className="text-xs">
+                        <b>Dica:</b> O Nome do Lugar onde o meu Pesadelo
+                        Começou.
                       </p>
                     )}
                   </div>
