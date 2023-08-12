@@ -6,11 +6,12 @@ import { Section } from "@/components/Section/Section";
 import { store } from "@/store";
 
 import { WelcomePost } from "@/components/WelcomePost/WelcomePost";
+import { orderPosts } from "@/functions/order-posts";
 
 export default async function Home() {
   const { posts } = store.getState().posts;
   const { ads } = store.getState().ads;
-
+  const orderedPosts = await orderPosts(posts);
   return (
     <>
       <div id="main" className="flex flex-col w-full bg-white gap-5">
@@ -18,7 +19,7 @@ export default async function Home() {
           <WelcomePost />
         </Section>
         <Section title="Últimos posts" categories={true}>
-          {posts.map((post: IPost) => {
+          {orderedPosts.map((post: IPost) => {
             return <Post key={post.id} post={post} />;
           })}
         </Section>

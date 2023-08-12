@@ -15,9 +15,10 @@ export const Res = ({
       <div className="w-auto mr-2">
         <Image
           src={autor?.foto || "/images/scream.png"}
-          width={50}
-          height={50}
+          width={120}
+          height={120}
           alt={`avatar de ${autor?.nick ?? autor?.nome}`}
+          className="max-w-[80px] max-h-[120px]"
         />
       </div>
       <div>

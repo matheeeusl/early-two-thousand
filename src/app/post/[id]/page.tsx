@@ -25,6 +25,7 @@ const PostPage = async ({ params }: { params: { id: string } }) => {
               width={600}
               height={100}
               alt={`Avatar de ${autor?.nick}`}
+              className="max-w-[180px]"
             />
             <p className="mt-4 font-cursive">{autor?.nick}</p>
             <p className="font-cursive">{post.data}</p>
