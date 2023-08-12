@@ -14,7 +14,7 @@ export const Res = ({
     <div className="w-full bg-gray-200 border-b-2 border-gray-300 px-4 py-2 flex">
       <div className="w-auto mr-2">
         <Image
-          src={autor?.foto ?? "/images/scream.png"}
+          src={autor?.foto || "/images/scream.png"}
           width={50}
           height={50}
           alt={`avatar de ${autor?.nick ?? autor?.nome}`}

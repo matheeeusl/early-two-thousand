@@ -21,7 +21,7 @@ const PostPage = async ({ params }: { params: { id: string } }) => {
         <div className="flex">
           <div className="p-4 border-black border-r-2">
             <Image
-              src={autor?.foto ?? "/images/scream.svg"}
+              src={autor?.foto || "/images/scream.svg"}
               width={600}
               height={100}
               alt={`Avatar de ${autor?.nick}`}

@@ -1,16 +1,100 @@
 [
   {
-    "id": "1",
-    "nome": "John Doe",
-    "foto": "/images/scream.svg",
-    "nick": "D00e",
-    "assinatura": "<p>Assinatura do John Doe</p>"
+    "id": "003",
+    "nome": "MoonWitch",
+    "foto": "",
+    "nick": "MoonWitch",
+    "assinatura": "<p class='font-mono text-center'> Bênçãos lunares a todos! </p>"
   },
   {
-    "id": "2",
-    "nome": "Ciclano de Tal",
-    "foto": "/images/scream.png",
-    "nick": "C1cl4n0",
-    "assinatura": "<p class='font-mono'>Assinatura do Ciclano de Tal</p>"
+    "id": "005",
+    "nome": "Shanon Diotallevi",
+    "foto": "https://cdn.discordapp.com/attachments/424969187128115200/1139711619560124476/Imagem_do_WhatsApp_de_2023-08-10_as_14.43.59.jpg",
+    "nick": "Shanon Diotallevi",
+    "assinatura": "<p class='font-mono text-center'>“Aqueles que não acreditam em magia nunca irão encontrá-la” - Roadl Dahl</p>"
+  },
+  {
+    "id": "004",
+    "nome": "Loup-Garou",
+    "foto": "",
+    "nick": "Loup-Garou",
+    "assinatura": ""
+  },
+  {
+    "id": "006",
+    "nome": "Sh4dowHunt3r",
+    "foto": "",
+    "nick": "Sh4dowHunt3r",
+    "assinatura": ""
+  },
+  {
+    "id": "007",
+    "nome": "Et_PuNkKk",
+    "foto": "https://i.pinimg.com/736x/10/12/d8/1012d82d72fc0f3804702743c072856f--emo-quotes-sponge-bob.jpg",
+    "nick": "Et_PuNkKk",
+    "assinatura": ""
+  },
+  {
+    "id": "008",
+    "nome": "OldBloodMage",
+    "foto": "",
+    "nick": "OldBloodMage",
+    "assinatura": "<p class='font-mono text-center'>Tem alguma dúvida ou quer fazer uma troca? </p><p> Mande mensagem para </p><p><strong>9983-33697</strong> </p> </p>"
+  },
+  {
+    "id": "009",
+    "nome": "Harry - The Seer",
+    "foto": "",
+    "nick": "Harry - The Seer",
+    "assinatura": ""
+  },
+  {
+    "id": "010",
+    "nome": "NoTaxesAndy",
+    "foto": "https://cdn.discordapp.com/attachments/424969187128115200/1139763499090853968/image.png",
+    "nick": "NoTaxesAndy",
+    "assinatura": "<p><strong>\"Conhecereis a verdade, e a verdade vos libertará.\" - João 8:32</strong></p><p>O QUE BUSH TÁ ESCONDENDO DA GENTE? VOCÊ TEM INFORMAÇÃO SOBRE O GOVERNO?</p><p>Ligue para: 48 99623-7200</p> <p><img src= \"https://cdn.discordapp.com/attachments/424969187128115200/1139763499090853968/image.png\"> </p>"
+  },
+  {
+    "id": "011",
+    "nome": "UrHugestFrnd",
+    "foto": "",
+    "nick": "UrHugestFrnd",
+    "assinatura": ""
+  },
+  {
+    "id": "012",
+    "nome": "xNisde_n",
+    "foto": "https://cdn.discordapp.com/attachments/424969187128115200/1139735556193013770/9dcdd39e-f949-4ebf-82bc-2c674f4d5afc.jpg",
+    "nick": "xNisde_n",
+    "assinatura": ""
+  },
+  {
+    "id": "013",
+    "nome": "L0ck3DxDeVxR00m",
+    "foto": "",
+    "nick": "L0ck3DxDeVxR00m",
+    "assinatura": "<p class='font-mono text-center'> <strong> If it's HELP you seek, ask for it. </strong> </p>"
+  },
+  {
+    "id": "014",
+    "nome": "wlexaae bcodo",
+    "foto": "",
+    "nick": "wlexaae bcodo",
+    "assinatura": ""
+  },
+  {
+    "id": "015",
+    "nome": "TravisIsAlive",
+    "foto": "",
+    "nick": "TravisIsAlive",
+    "assinatura": "<p class='font-mono text-center'>““As respostas estão lá fora, é só procurar” - Dana Scully - Arquivo X</p>"
+  },
+  {
+    "id": "016",
+    "nome": "32_scornx62845854",
+    "foto": "",
+    "nick": "32_scornx62845854",
+    "assinatura": ""
   }
 ]

@@ -17,9 +17,9 @@ export const Section = ({
       {categories && (
         <div className="grid grid-cols-12 bg-slate-200">
           <div className="text-xs text-center">-</div>
-          <div className="text-xs col-span-9 pl-1">Título</div>
+          <div className="text-xs col-span-8 pl-1">Título</div>
           <div className="text-xs pl-1">Respostas</div>
-          <div className="text-xs pl-1">Autor</div>
+          <div className="text-xs pl-1 col-span-2">Autor</div>
         </div>
       )}
       <div className="bg-white">{children}</div>
